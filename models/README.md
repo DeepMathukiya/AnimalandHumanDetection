@@ -34,3 +34,5 @@ Accuracy of Classification model:
 
 Validation Accuracy: 0.87
 
+due to noisy images and number of sample is also small in number that`s why model is not as efficient as it can be.
+

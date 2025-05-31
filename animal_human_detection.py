@@ -58,17 +58,23 @@ def process_video(video_path, output_path, yolo_model, classifier_model):
             img_array = img_to_array(cropped)
             img_array= np.array(img_array)/255.0
             img_array = np.expand_dims(img_array, axis=0)
+            label = int(detections.cls[i].item())
+            label_name = "Human" if label == 0 else "Animal"
+            print(label_name)
 
             if cropped.size == 0:
                 continue
 
             label = classify_object(classifier_model, img_array)
-
+            if label != label_name:
+                label = "Unknown"  # If classification does not match YOLO label
             # Draw box and label
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
             cv2.putText(frame, label, (x1, y1 - 10),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 0, 0), 2)
-            cv2.imshow("Frame", frame)
+        cv2.imshow("Processed Frame", frame)  
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break  
 
         if out is None:
             out = cv2.VideoWriter(output_path, fourcc, 20.0, (img_w, img_h))
