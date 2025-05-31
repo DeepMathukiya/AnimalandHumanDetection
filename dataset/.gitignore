@@ -2,3 +2,6 @@ train/
 val/
 human/
 animal/
+cropped_dataset_train/
+cropped_dataset_val/
+dataset_yolo/
