@@ -1,6 +1,6 @@
 # Why Open Images Dataset is Ideal for Retraining YOLO Models
 
-The **Open Images Dataset** is a powerful and comprehensive resource curated by Google, containing millions of labeled images spanning thousands of object categories. It is particularly well-suited for **retraining YOLO (You Only Look Once)** models — one of the fastest and most accurate object detection algorithms — due to its scale, diversity, and detailed annotations.
+The **Open Images Dataset** is a powerful and comprehensive resource curated by Google, containing millions of labeled images spanning thousands of object categories.Apart from this YOLO models are already pre-trained on the Open Images Dataset, using it for fine-tuning or custom classification ensures better compatibility, faster convergence, and more accurate predictions due to the alignment between training and inference data distributions
 
 ---
 
@@ -17,6 +17,5 @@ The **Open Images Dataset** is a powerful and comprehensive resource curated by 
 ---
 ## Dataset For Classification 
 
-for to classification task dataset using yolotrained model take each image prediction and store into the related folder.
-
+To perform the classification task, each image was passed through a YOLO-trained model. Based on the predicted class, the image was cropped and then saved into its corresponding class folder.
 
