@@ -43,11 +43,13 @@ pip install -r requirements.txt
 
 Place your .mp4 video files inside the test_videos/ directory.
 
-#### 2. Run the script for save the video
-
+#### 2. Run the script for the video files
+provide Video name at run time
 ```bash
 python animal_human_detection.py
 ```
+output Video will be in outputs directory 
+
 #### 3. Run script for Realtime Video URL  
 provide Video Link at run time
 eg rtmp://localhost:1935/live
