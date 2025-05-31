@@ -3,8 +3,4 @@ yolo11n.pt
 yolov8n.pt
 vgg19_model_o8.keras
 vgg19_classifier.h5
-yolo_model_trained.pt
 custom_model.keras
-
-
-
